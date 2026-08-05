@@ -1,67 +1,167 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome</title>
+<title>Public Config</title>
+
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma;
 }
+
 body{
-    background:#0d1117;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    overflow:hidden;
+background:#050505;
+color:white;
+overflow-x:hidden;
 }
-.container{
-    text-align:center;
-    animation:fade 1.5s ease;
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle,#00ffcc22 2px,transparent 2px);
+background-size:40px 40px;
+animation:bg 20s linear infinite;
+z-index:-1;
 }
+
+@keyframes bg{
+from{transform:translateY(0);}
+to{transform:translateY(-300px);}
+}
+
+header{
+text-align:center;
+padding:50px 20px;
+}
+
 h1{
-    font-size:60px;
-    color:#58a6ff;
-    text-shadow:0 0 20px #58a6ff;
+font-size:45px;
+color:#00ffff;
+text-shadow:0 0 20px cyan;
 }
+
 p{
-    margin-top:20px;
-    font-size:20px;
-    color:#c9d1d9;
+margin-top:10px;
+color:#ccc;
 }
-button{
-    margin-top:35px;
-    padding:15px 35px;
-    border:none;
-    border-radius:30px;
-    background:#238636;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
+
+.card{
+width:90%;
+max-width:400px;
+margin:25px auto;
+background:#111;
+border:1px solid #00ffff44;
+border-radius:20px;
+padding:20px;
+box-shadow:0 0 20px #00ffff33;
+transition:.3s;
 }
-button:hover{
-    transform:scale(1.08);
-    box-shadow:0 0 20px #238636;
+
+.card:hover{
+transform:scale(1.03);
+box-shadow:0 0 35px cyan;
 }
-@keyframes fade{
-    from{opacity:0;transform:translateY(30px);}
-    to{opacity:1;transform:translateY(0);}
+
+.name{
+font-size:22px;
+margin-bottom:15px;
 }
+
+.download{
+display:block;
+text-align:center;
+background:#00ff66;
+padding:15px;
+border-radius:12px;
+text-decoration:none;
+color:black;
+font-size:20px;
+font-weight:bold;
+transition:.3s;
+}
+
+.download:hover{
+background:#00ffaa;
+box-shadow:0 0 20px #00ff99;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#777;
+}
+
 </style>
+
 </head>
+
 <body>
 
-<div class="container">
-    <h1>WELCOME</h1>
-    <p>A modern website is under construction.</p>
-    <button>Explore</button>
+<header>
+
+<h1>🔥 PUBLIC CONFIG 🔥</h1>
+
+<p>به سایت دانلود خوش آمدید</p>
+
+</header>
+
+<div class="card">
+
+<div class="name">
+🇩🇪 Germany Config
 </div>
 
+<a class="download" href="config1.txt" download>
+
+دانلود
+
+</a>
+
+</div>
+
+<div class="card">
+
+<div class="name">
+🇹🇷 Turkey Config
+</div>
+
+<a class="download" href="config2.txt" download>
+
+دانلود
+
+</a>
+
+</div>
+
+<div class="card">
+
+<div class="name">
+🇫🇷 France Config
+</div>
+
+<a class="download" href="config3.txt" download>
+
+دانلود
+
+</a>
+
+</div>
+
+<footer>
+
+© 2026 Public Config
+
+</footer>
+
 </body>
+
 </html>
